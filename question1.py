@@ -91,10 +91,12 @@ plt.ylabel('Value element n+1')
 plt.savefig('./plots/q1a1.png')
 plt.close()
 
-plt.plot(all_randnum)
+plt.scatter(range(0,len(all_randnum)),all_randnum,s=10)
+# Connect them to see whether they are correlated
+plt.plot(all_randnum,lw=1,ls='solid',alpha=0.5)
 plt.title(f'First {len(all_randnum)} random numbers')
 plt.ylabel('Value element')
-plt.xlabel('Index')
+plt.xlabel('Iteration')
 plt.savefig('./plots/q1a2.png')
 plt.close()
 
